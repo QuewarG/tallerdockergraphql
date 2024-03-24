@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutMiguelCaicedo: String
   }
 `;
 
@@ -15,6 +16,9 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutMiguelCaicedo: () => {
+      return 'Soy Miguel, tengo 20 años de edad me gusta la tecnologia y el deporte. Me apasiona las motocicletas, salir de paseo y compartir con mis compañeros y amigos'
+    }
   },
 };
 
