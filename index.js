@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutDylanFarkas: String
   }
 `;
 
@@ -15,6 +16,11 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutDylanFarkas: () => {
+      return `¡Holiii a toditessss!. Soy Dylan Farkas, estudio Ingeniería de Sistemas, 
+      me gusta la música, mi deporte favorito es el ciclismo, me gusta el gimnasio, 
+      no tengo mascotas yyyy armé el cubo de rubik en menos de 30 segundos :D`;
+    } 
   },
 };
 
