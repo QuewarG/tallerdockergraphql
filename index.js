@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutCamiloMorales: String
   }
 `;
 
@@ -14,6 +15,9 @@ const resolvers = {
   Query: {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
+      },
+      aboutCamiloMorales: () => {
+        return `Holaa a todos, soy Camilo Morales, estudio tecnología en desarrollo de software, me gusta el tenis de mesa, las mascotas y subir el cerro 🤑😎.`;
       },
   },
 };
