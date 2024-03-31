@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutKevinG: String
   }
 `;
 
@@ -15,6 +16,10 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutKevinG: () =>{
+      return `Hola, soy Kevin Giron, estudio tecnología en desarrollo de software y trabajo como 
+      analista de sistema, me gusta los deportes extremos y salir a caminar `;
+    },
   },
 };
 
@@ -46,4 +51,5 @@ async function startApolloServer() {
 }
 
 startApolloServer();
+
 
