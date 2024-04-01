@@ -7,7 +7,10 @@ const typeDefs = gql`
   type Query {
     hello(message: String!): String
     aboutStivenC : String
-    
+    aboutDylanFarkas: String
+    aboutMiguelCaicedo: String
+    aboutJuanSebastian: String
+
   }
 `;
 
@@ -15,12 +18,30 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: (_, { message }) => {
+
       return `¡Hola, ${message}! Un saludo por parte del profe `;
     },
     aboutStivenC: () => {
       return `Hola, soy Stiven Castro, me gusta jugar futbol, hacer ejercicio, 
         escuchar musica y los animales   `;
     },
+
+        return `¡Hola, ${message}! Un saludo por parte del profe `;
+      },
+
+    aboutDylanFarkas: () => {
+      return `¡Holiii a toditessss!. Soy Dylan Farkas, estudio Ingeniería de Sistemas, 
+      me gusta la música, mi deporte favorito es el ciclismo, me gusta el gimnasio, 
+      no tengo mascotas yyyy armé el cubo de rubik en menos de 30 segundos :D`;
+    } 
+    aboutMiguelCaicedo: () => {
+      return 'Soy Miguel, tengo 20 años de edad me gusta la tecnologia y el deporte. Me apasiona las motocicletas, salir de paseo y compartir con mis compañeros y amigos'
+    }
+
+    aboutJuanSebastian: () => {
+      return `¡Hola! Me llamo Sebastian Oviedo Oviedo soy estudiante de TEDESOFT en Univalle. Me gusta los paisajes verdes y jugar videojuegos con compañeros`;
+    },
+
   },
 };
 
