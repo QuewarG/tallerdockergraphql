@@ -6,7 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
-
+    aboutJohn: String
     aboutJhoimarS: String
     aboutCamiloMorales: String
     aboutKevinG: String
@@ -56,6 +56,10 @@ const resolvers = {
 
     aboutJuanSebastian: () => {
       return `¡Hola! Me llamo Sebastian Oviedo Oviedo soy estudiante de TEDESOFT en Univalle. Me gusta los paisajes verdes y jugar videojuegos con compañeros`;
+    },
+
+    aboutJohn: () => {
+      return `¡Hola! Me llamo John Me gusta los paisajes verdes y jugar videojuegos con compañeros`;
     },
     
   },
