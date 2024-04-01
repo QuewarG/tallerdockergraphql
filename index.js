@@ -7,7 +7,7 @@ const typeDefs = gql`
   type Query {
     hello(message: String!): String
 
-
+    aboutJhoimarS: String
     aboutCamiloMorales: String
     aboutKevinG: String
     aboutStivenC : String
@@ -22,14 +22,17 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: (_, { message }) => {
-
-
-      aboutCamiloMorales: () => {
-        return `Holaa a todos, soy Camilo Morales, estudio tecnología en desarrollo de software, me gusta el tenis de mesa, las mascotas y subir el cerro`;
-      },
-
       return `¡Hola, ${message}! Un saludo por parte del profe `;
     },
+
+     aboutCamiloMorales: () => {
+        return `Holaa a todos, soy Camilo Morales, estudio tecnología en desarrollo de software, me gusta el tenis de mesa, las mascotas y subir el cerro`;
+      },
+     aboutJhoimarS: () => {
+        return `Hola profe soy Jhoimar Silva soy de Valledupar, tambien soy un aficionado en la programación y me encanta viajar en moto xd`;
+      },
+
+
     aboutStivenC: () => {
       return `Hola, soy Stiven Castro, me gusta jugar futbol, hacer ejercicio, 
         escuchar musica y los animales   `;
@@ -54,7 +57,6 @@ const resolvers = {
     aboutJuanSebastian: () => {
       return `¡Hola! Me llamo Sebastian Oviedo Oviedo soy estudiante de TEDESOFT en Univalle. Me gusta los paisajes verdes y jugar videojuegos con compañeros`;
     },
-
     
   },
 };
