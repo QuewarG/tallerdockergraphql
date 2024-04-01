@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutJhoimarS: String
   }
 `;
 
@@ -14,6 +15,9 @@ const resolvers = {
   Query: {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
+      },
+      aboutJhoimarS: () => {
+        return 'Hola profe soy Jhoimar Silva soy de Valledupar, tambien soy un aficionado en la programación y me encanta viajar en moto'
       },
   },
 };
